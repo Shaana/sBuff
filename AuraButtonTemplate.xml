@@ -1,0 +1,35 @@
+<Ui xmlns="http://www.blizzard.com/wow/ui/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.blizzard.com/wow/ui/
+..\FrameXML\UI.xsd">
+	<Button name="sBuffButtonTemplate" inherits="SecureActionButtonTemplate" virtual="true">
+		<Size x="64" y="64"/>
+    <Attributes>
+			<Attribute name="type" value="cancelaura"/>
+		</Attributes>
+		<Scripts>
+			<OnLoad>
+				self:RegisterForClicks("RightButtonDown");
+			</OnLoad>
+			<OnEnter>
+				self.hasActiveToolTip = true;
+				sBuff:UpdateAuraToolTip(self);
+			</OnEnter>
+			<OnLeave>
+				self.hasActiveToolTip = false;
+				GameTooltip:Hide();
+			</OnLeave>
+		</Scripts>
+	</Button>
+	<Button name="sDebuffButtonTemplate" inherits="SecureActionButtonTemplate" virtual="true">
+		<Size x="64" y="64"/>
+		<Scripts>
+			<OnEnter>
+				self.hasActiveToolTip = true;
+				sBuff:UpdateAuraToolTip(self);
+			</OnEnter>
+			<OnLeave>
+				self.hasActiveToolTip = false;
+				GameTooltip:Hide();
+			</OnLeave>
+		</Scripts>
+	</Button>
+</Ui>

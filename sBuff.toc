@@ -1,0 +1,12 @@
+## Interface: 40300
+## Title: sBuff
+## Notes: Simple player aura addon
+## Author: Share
+## Version: 0.8 beta
+## RequiredDeps: Ace3
+## X-Embeds: Ace3
+## X-Category: Buffs
+
+AuraButtonTemplate.xml
+config.lua
+sBuff.lua
